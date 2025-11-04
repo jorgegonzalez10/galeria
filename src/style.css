@@ -27,7 +27,24 @@ body {
   justify-content: center;
 }
 
+.container{
+  display: flex;
+  border: 1px solid red;
+  margin:auto;
+  width: 70%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 a {
   color: white;
   text-decoration: none;
+
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 1 calc(33.33% - 20px);
 }
