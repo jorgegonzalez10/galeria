@@ -1,1 +1,2 @@
-console.log("conectado")
+import "./data/categories.js"
+import "./data/photos.js"
