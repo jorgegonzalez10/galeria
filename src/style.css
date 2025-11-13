@@ -81,8 +81,9 @@ a {
 
 }
 
-.purpura__elefante {
+.purpura__img {
   width: 80%;
+  height: 600px;
 }
 
 .red__img {
@@ -115,4 +116,8 @@ height: 100px;
 .galeria--active{
   display: block;
 
+}
+
+.img--one{
+  border: solid 10px white
 }
