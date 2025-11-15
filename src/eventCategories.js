@@ -15,7 +15,6 @@ container.addEventListener('click', e => {
   photos.innerHTML = '';
   document.body.style.overflow = 'hidden';
   const target = e.target.dataset.category;
-
   continents[target].forEach((continent) => {
     titulo.innerHTML = `${target.toUpperCase()}`;
     imagen.src = `/src/assets/${target}/1.jpg`;
@@ -23,7 +22,13 @@ container.addEventListener('click', e => {
     const img = photos.querySelector('.red__img');
       if (continent.image_path === `./src/assets/${target}/1.jpg`){
       img.classList.add('img--one')
+        console.log(photos)
+        photos.addEventListener('click', e => {
+          e.preventDefault()
+          imagen.src = e.target.src
+            })
       };
+
   });
 })
 
