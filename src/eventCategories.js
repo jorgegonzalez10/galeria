@@ -14,20 +14,26 @@ container.addEventListener('click', e => {
   padre.classList.add('galeria--active');
   photos.innerHTML = '';
   document.body.style.overflow = 'hidden';
+  console.log(e)
   const target = e.target.dataset.category;
+
   continents[target].forEach((continent) => {
+
     titulo.innerHTML = `${target.toUpperCase()}`;
     imagen.src = `/src/assets/${target}/1.jpg`;
-    photos.innerHTML += `<img class="red__img" src=${continent.image_path}>`;
+    photos.innerHTML += `<img class="red__img" src=${continent.image_path} data-name="${continent.name}">`;
+
+
     const img = photos.querySelector('.red__img');
+
       if (continent.image_path === `./src/assets/${target}/1.jpg`){
       img.classList.add('img--one')
-        console.log(photos)
-        photos.addEventListener('click', e => {
+      };
+      photos.addEventListener('click', e => {
           e.preventDefault()
           imagen.src = e.target.src
+          titulo.innerHTML = `${e.target.dataset.name}`
             })
-      };
 
   });
 })
